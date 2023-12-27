@@ -1,0 +1,45 @@
+@use "./variables";
+
+#nutrition {
+  padding: variables.$padding;
+
+  background-image: url("../../images/nutrition.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: variables.$padding;
+
+  @media screen and (max-width: variables.$breakpoint-medium) {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: calc(2 * variables.$padding);
+  }
+
+  section {
+    max-width: 20rem;
+    margin: 0 auto;
+    background-color: variables.$color-yellow;
+    color: variables.$color-black;
+    padding: variables.$padding;
+    transition: transform 0.2s;
+    clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+    text-align: right;
+
+    @media screen and (max-width: variables.$breakpoint-medium) {
+      text-align: center;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  button {
+    align-self: center;
+
+  }
+}

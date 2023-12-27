@@ -1,0 +1,67 @@
+@use "partials/variables";
+
+@use "partials/utility";
+@use "partials/animate";
+
+@use "partials/header";
+@use "partials/about";
+@use "partials/services";
+@use "partials/cta";
+@use "partials/classes";
+@use "partials/nutrition";
+@use "partials/wellness";
+@use "partials/membership";
+@use "partials/contact";
+
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Titillium+Web&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Righteous&family=Titillium+Web&display=swap');
+
+/*
+font-family: 'Racing Sans One', sans-serif;
+font-family: 'Righteous', sans-serif;
+font-family: 'Titillium Web', sans-serif;
+*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: variables.$color-black;
+  background-color: variables.$color-black;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+#content-wrapper {
+  margin-left: 25rem;
+  background-color: variables.$color-black;
+
+  @media (max-width: variables.$breakpoint-large) {
+    margin-left: 0;
+  }
+
+  h2,
+  h3 {
+    font-family: 'Racing Sans One', sans-serif;
+  }
+
+  p {
+    font-size: 1.4rem;
+    line-height: 1.5;
+  }
+}

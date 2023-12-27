@@ -1,0 +1,45 @@
+@use "./variables";
+
+#about {
+  background-color: variables.$color-yellow;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: space-between;
+
+  min-height: 100vh;
+  text-align: right;
+
+  @media (max-width: variables.$breakpoint-medium) {
+    flex-direction: column-reverse;
+  }
+
+  img {
+    width: 30rem;
+    object-fit: cover;
+    object-position: right;
+
+    @media (max-width: variables.$breakpoint-xlarge) {
+      width: 20rem;
+    }
+
+
+    @media (max-width: variables.$breakpoint-medium) {
+      width: 100%;
+    }
+  }
+
+  section {
+    padding: variables.$padding;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+    max-width: 50rem;
+
+    a {
+      margin-top: variables.$padding;
+      align-self: flex-end;
+    }
+  }
+}

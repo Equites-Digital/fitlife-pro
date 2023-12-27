@@ -1,0 +1,86 @@
+@use "./variables";
+
+#services {
+  background-image: url("../../images/woman-barbell.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  padding: variables.$padding calc(4 * variables.$padding);
+  padding-bottom: calc(2 * variables.$padding);
+
+  color: variables.$color-white;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6rem;
+
+  @media (max-width: variables.$breakpoint-xxlarge) {
+    padding: variables.$padding calc(2 * variables.$padding);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: variables.$breakpoint-xlarge) {
+    grid-template-columns: 1fr;
+  }
+
+  @media (max-width: variables.$breakpoint-large) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: variables.$breakpoint-medium) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: variables.$padding;
+  }
+
+  &>div {
+    grid-column: span 3;
+
+    @media  (max-width: variables.$breakpoint-xxlarge){
+      grid-column: span 2;
+    }
+
+    @media (max-width: variables.$breakpoint-xlarge) {
+      grid-column: span 1;
+    }
+
+    @media (max-width: variables.$breakpoint-large) {
+      grid-column: span 2;
+    }
+
+    @media (max-width: variables.$breakpoint-medium) {
+      grid-column: span 1;
+      
+    }
+  }
+
+  section {
+    max-width: 30rem;
+    padding: variables.$padding;
+    color: variables.$color-black;
+    background-color: variables.$color-yellow;
+    clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+
+    transition: 0.2s;
+    border-left: 3px solid variables.$color-yellow;
+
+    h3 {
+      font-size: 2rem;
+      font-family: 'Racing Sans One', sans-serif;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+
+      color: variables.$color-yellow;
+      background-color: variables.$color-black;
+
+      h3 {
+        text-decoration: underline;
+      }
+    }
+
+
+  }
+}

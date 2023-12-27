@@ -1,0 +1,14 @@
+@use "./variables";
+
+#call-to-action {
+  padding: calc(2 * variables.$padding) variables.$padding;
+  background-color: variables.$color-yellow;
+  color: variables.$color-black;
+
+  text-align: center;
+
+  h2 {
+    margin-top: 0;
+  }
+
+}

@@ -1,0 +1,44 @@
+@use "./variables";
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button,
+.button-inverse {
+  display: block;
+  font-family: 'Racing Sans One', sans-serif;
+  padding: 1rem;
+  font-size: 2rem;
+
+  cursor: pointer;
+  transition: 0.2s;
+  text-decoration: none;
+}
+
+.button {
+  background-color: variables.$color-black;
+  color: variables.$color-yellow;
+  border: 3px solid variables.$color-black;
+
+  &:hover {
+    background-color: variables.$color-yellow;
+    color: black;
+    transform: scale(1.1);
+  }
+}
+
+.button-inverse {
+  background-color: variables.$color-yellow;
+  color: variables.$color-black;
+  border: 3px solid variables.$color-yellow;
+
+  &:hover {
+    background-color: variables.$color-black;
+    border: 3px solid variables.$color-black;
+    color: variables.$color-yellow;
+    transform: scale(1.1);
+  }
+}

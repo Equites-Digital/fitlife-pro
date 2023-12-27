@@ -1,0 +1,72 @@
+@use "./variables";
+
+#classes {
+  padding: variables.$padding calc(4 * variables.$padding);
+  background-color: variables.$color-black;
+  color: variables.$color-yellow;
+
+  @media (max-width: variables.$breakpoint-medium) {
+    padding: variables.$padding;
+  }
+
+  h2 {
+    @media (max-width: variables.$breakpoint-medium) {
+      text-align: center;
+      
+    }
+  }
+  
+
+
+  #classes-schedules-navigation {
+    display: flex;
+    justify-content: center;
+    gap: variables.$padding;
+    align-items: center;
+    margin-bottom: variables.$padding;
+    font-size: 2rem;
+
+    img {
+      width: 2rem;
+      height: 2rem;
+      cursor: pointer;
+      transition: 0.2s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  #classes-schedules {
+    overflow: hidden;
+    position: relative;
+
+    height: 20rem;
+
+    table {
+      position: absolute;
+      width: calc(100% - 2rem);
+      margin-left: 1rem;
+      margin-right: 1rem;
+      border-collapse: collapse;
+      transition: 0.5s;
+
+      th,
+      td {
+        padding: 1rem;
+        border: 1px solid variables.$color-yellow;
+      }
+
+      th {
+        background-color: variables.$color-yellow;
+        color: variables.$color-black;
+      }
+
+      tr:nth-child(even) {
+        background-color: variables.$color-yellow;
+        color: variables.$color-black;
+      }
+    }
+  }
+}

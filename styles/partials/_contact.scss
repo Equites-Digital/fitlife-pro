@@ -1,0 +1,53 @@
+@use "./variables";
+
+#contact {
+
+  padding: variables.$padding;
+  background-image: url("../../images/barbell.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  h2 {
+    color: variables.$color-yellow;
+    text-align: center;
+  }
+
+  form {
+    max-width: 40rem;
+    margin: 0 auto;
+    border: 3px solid variables.$color-yellow;
+    background-color: variables.$color-black;
+    padding: variables.$padding;
+
+    display: flex;
+    flex-direction: column;
+    gap: variables.$padding;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: calc(variables.$padding / 2);
+    }
+
+    label {
+      font-family: 'Racing Sans One', sans-serif;
+      font-size: 2rem;
+      color: variables.$color-yellow;
+    }
+
+    input, textarea {
+      font-family: 'Racing Sans One', sans-serif;
+      font-size: 2rem;
+      padding: 1rem;
+      border: 3px solid variables.$color-yellow;
+    }
+
+    button {
+      width: calc(100% - 4rem);
+      margin: 0 auto;
+    }
+
+
+  }
+}

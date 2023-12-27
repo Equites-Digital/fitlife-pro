@@ -1,0 +1,60 @@
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    background-position: initial !important;
+    background-size: initial !important;
+    scroll-behavior: auto !important;
+    transition-delay: 0s !important;
+    transition-duration: 0s !important;
+  }
+}
+
+.slide-up, .slide-left, .slide-right, .slide-down {
+  transition-delay: 0.5s;
+  transition: transform 1s, opacity 1s;
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(20px);
+
+  &.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-left {
+  opacity: 0;
+  transform: translateX(20px);
+
+  &.animate {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-right {
+  opacity: 0;
+  transform: translateX(-20px);
+
+  &.animate {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-down {
+  opacity: 0;
+  transform: translateY(-20px);
+
+  &.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

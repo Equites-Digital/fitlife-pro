@@ -1,0 +1,91 @@
+@use "./variables";
+
+header {
+  background-color: variables.$color-black;
+  color: variables.$color-white;
+  background-image: url("../../images/dots.png");
+  background-size: contain;
+  // bottom left
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  width: 25rem;
+  font-family: 'Racing Sans One', sans-serif;
+
+  @media (max-width: variables.$breakpoint-large) {
+    width: 100vw;
+    height: auto;
+    position: relative;
+  }
+
+  @media (max-width: variables.$breakpoint-medium) {
+    background-position: 0 20vh;
+  }
+
+  @media (max-width: variables.$breakpoint-small) {
+    background-image: none;
+  }
+
+  &>div {
+    text-align: right;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media (max-width: variables.$breakpoint-large) {
+      justify-content: center;
+      align-items: right;
+      flex-direction: column;
+      h1 {
+        font-size: 2rem;
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+
+    div {
+      h1 {
+        margin-bottom: 0;
+      }
+    }
+
+    padding-right: variables.$padding;
+
+    &:hover {
+      backdrop-filter: blur(10px);
+    }
+
+    nav {
+
+      ul {
+        li {
+          list-style: none;
+          margin-bottom: 2rem;
+          font-size: 1.5rem;
+          font-weight: bold;
+          cursor: pointer;
+
+          a {
+            color: white;
+            display: inline-block;
+            text-decoration: none;
+            transition: 0.2s;
+
+            &:hover {
+              text-decoration: underline;
+              color: variables.$color-yellow;
+              transform: scale(1.1) !important;
+              padding-right: variables.$padding;
+            }
+          }
+
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+@use "./variables";
+
+#wellness {
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: variables.$padding;
+
+  @media screen and (max-width: variables.$breakpoint-medium) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: calc(2 * variables.$padding);
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: variables.$padding;
+
+    text-align: right;
+
+    padding: variables.$padding;
+    background-color: variables.$color-yellow;
+    color: variables.$color-black;
+
+    h2 {
+      margin-bottom: 0;
+    }
+
+    a {
+      align-self: flex-end;
+    }
+  }
+
+  img {
+    max-width: 20rem;
+    margin: variables.$padding auto;
+  }
+
+}
