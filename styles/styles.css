@@ -103,7 +103,7 @@
 header {
   background-color: #131313;
   color: #FFFFFF;
-  background-image: url("../../images/dots.png");
+  background-image: url("../images/dots.png");
   background-size: contain;
   background-position: 0 100%;
   background-repeat: no-repeat;
@@ -171,7 +171,7 @@ header > div nav ul li a {
   text-decoration: none;
   transition: 0.2s;
 }
-header > div nav ul li a:hover {
+header > div nav ul li a:hover, header > div nav ul li a.active {
   text-decoration: underline;
   color: #F4E12F;
   transform: scale(1.1) !important;
@@ -222,7 +222,7 @@ header > div nav ul li a:hover {
 }
 
 #services {
-  background-image: url("../../images/woman-barbell.jpg");
+  background-image: url("../images/woman-barbell.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -373,7 +373,7 @@ header > div nav ul li a:hover {
 
 #nutrition {
   padding: 2rem;
-  background-image: url("../../images/nutrition.png");
+  background-image: url("../images/nutrition.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -510,7 +510,7 @@ header > div nav ul li a:hover {
 
 #contact {
   padding: 2rem;
-  background-image: url("../../images/barbell.jpg");
+  background-image: url("../images/barbell.jpg");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;

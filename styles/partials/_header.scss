@@ -3,7 +3,7 @@
 header {
   background-color: variables.$color-black;
   color: variables.$color-white;
-  background-image: url("../../images/dots.png");
+  background-image: url("../images/dots.png");
   background-size: contain;
   // bottom left
   background-position: 0 100%;
@@ -76,7 +76,7 @@ header {
             text-decoration: none;
             transition: 0.2s;
 
-            &:hover {
+            &:hover, &.active {
               text-decoration: underline;
               color: variables.$color-yellow;
               transform: scale(1.1) !important;
