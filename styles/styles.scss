@@ -33,6 +33,8 @@ body {
   color: variables.$color-black;
   background-color: variables.$color-black;
   font-family: 'Titillium Web', sans-serif;
+  overflow-x: hidden;
+  overflow-y: visible;
 }
 
 h1 {

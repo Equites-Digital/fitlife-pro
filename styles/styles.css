@@ -566,6 +566,8 @@ body {
   color: #131313;
   background-color: #131313;
   font-family: "Titillium Web", sans-serif;
+  overflow-x: hidden;
+  overflow-y: visible;
 }
 
 h1 {
